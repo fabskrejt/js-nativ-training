@@ -47,15 +47,18 @@ const user = {
 let copyUser;
 copyUser = {...user}
 //Проверка:
- console.log(user===copyUser) //- что должно быть в консоли?
- console.log(user.friends===copyUser.friends) //- что должно быть в консоли?
+console.log('Next task')
+console.log(user === copyUser) //- что должно быть в консоли?
+console.log(user.friends === copyUser.friends) //- что должно быть в консоли?
 
 //2. Полная (глубокая) копия объекта user
 let deepCopyUser;
+deepCopyUser = {...user, friends: [...user.friends]}
 
 //Проверка:
-// console.log(user===deepCopyUser) - что должно быть в консоли?
-// console.log(user.friends===deepCopyUser.friends) - что должно быть в консоли?
+console.log('Next task')
+console.log(user === deepCopyUser) //- что должно быть в консоли?
+console.log(user.friends === deepCopyUser.friends) //- что должно быть в консоли?
 
 //3. Поверхностная копия массива students
 let copyStudents;
@@ -83,7 +86,7 @@ let sortByScores;
 console.log(sortByScores);
 
 //6. Сформируйте массив студентов, у которых 100 и более баллов (filter)
-let  bestStudents;
+let bestStudents;
 console.log(bestStudents)
 
 //6a. Получите массив ("вырежьте") из трёх лучших студентов из массива deepCopyStudents (splice)
