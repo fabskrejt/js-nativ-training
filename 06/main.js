@@ -47,7 +47,7 @@ const user = {
 let copyUser;
 copyUser = {...user}
 //Проверка:
-console.log('Next task')
+console.log('Task 1')
 console.log(user === copyUser) //- что должно быть в консоли?
 console.log(user.friends === copyUser.friends) //- что должно быть в консоли?
 
@@ -56,23 +56,25 @@ let deepCopyUser;
 deepCopyUser = {...user, friends: [...user.friends]}
 
 //Проверка:
-console.log('Next task')
+console.log('Task 2')
 console.log(user === deepCopyUser) //- что должно быть в консоли?
 console.log(user.friends === deepCopyUser.friends) //- что должно быть в консоли?
 
 //3. Поверхностная копия массива students
 let copyStudents;
-
+copyStudents = [...students]
 //Проверка:
-// console.log(код проверки написать самостоятельно ) - что должно быть в консоли?
-// console.log(код проверки написать самостоятельно) - что должно быть в консоли?
+console.log('Task 3')
+ console.log(copyStudents === students) //- что должно быть в консоли?
+ console.log(copyStudents[0] === students[0]) //- что должно быть в консоли?
 
 //4*. Полная (глубокая) копия массива students (map)
 let deepCopyStudents;
-
+deepCopyStudents = students.map(i => ({...i}))
 //Проверка:
-// console.log(код проверки написать самостоятельно) - что должно быть в консоли?
-// console.log(код проверки написать самостоятельно) - что должно быть в консоли?
+console.log('Task 4')
+ console.log(deepCopyStudents === students) //- что должно быть в консоли?
+ console.log(deepCopyStudents[0] === students[0]) //- что должно быть в консоли?
 
 // NB!!! Далее все преобразования выполняем не модифицируя исходный массив students
 // Вывод результатов - в консоль
