@@ -145,10 +145,14 @@ console.log(trueStudents)
 
 //10. Nick женился. Выполните выполните соответствующие преобразование массива students (map)
 let studentsWithMarriedNick;
+studentsWithMarriedNick = [...students].map(s=>s.name ==='Nick' ? {...s, isMarried: true }: s)
+console.log('Task 10')
 console.log(studentsWithMarriedNick)
 
 //11. Найдите студента по имени Ann (find)
 let ann;
+ann = students.find( s => s.name === 'Ann')
+console.log('Task 11')
 console.log(ann)
 
 //12. Найдите студента с самым высоким баллом (reduce)
