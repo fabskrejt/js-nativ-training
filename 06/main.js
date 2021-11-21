@@ -116,18 +116,25 @@ console.log(newDeepCopyStudents)
 
 //7. Сформируйте массив холостых студентов (filter)
 let notMarriedStudents;
+notMarriedStudents = [...students].filter(s=> !s.isMarried)
+console.log('Task 7')
 console.log(notMarriedStudents)
 
 //8. Сформируйте массив имён студентов (map)
 let studentsNames;
+studentsNames = [...students].map(i => i.name)
+console.log('Task 8')
 console.log(studentsNames)
 
 //8a. Сформируйте строку из имён студентов, разделённых
 // - пробелом (join)
 // - запятой (join)
 let nameWithSpace;
+nameWithSpace = studentsNames.join(' ')
+console.log('Task 9')
 console.log(nameWithSpace)
 let namesWithComma;
+namesWithComma = studentsNames.join(',')
 console.log(namesWithComma)
 
 //9. Добавьте всем студентам свойство "isStudent" со значением true (map)
