@@ -131,7 +131,7 @@ console.log(studentsNames)
 // - запятой (join)
 let nameWithSpace;
 nameWithSpace = studentsNames.join(' ')
-console.log('Task 9')
+console.log('Task 8a')
 console.log(nameWithSpace)
 let namesWithComma;
 namesWithComma = studentsNames.join(',')
@@ -139,6 +139,8 @@ console.log(namesWithComma)
 
 //9. Добавьте всем студентам свойство "isStudent" со значением true (map)
 let trueStudents;
+trueStudents = [...students].map(s => ({...s, isStudent:true}))
+console.log('Task 9')
 console.log(trueStudents)
 
 //10. Nick женился. Выполните выполните соответствующие преобразование массива students (map)
