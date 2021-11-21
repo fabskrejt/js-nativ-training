@@ -157,10 +157,15 @@ console.log(ann)
 
 //12. Найдите студента с самым высоким баллом (reduce)
 let bestStudent;
+bestStudent = students.reduce((acc,s)=> s.scores > acc.scores ? s: acc)
+console.log('Task 12')
 console.log(bestStudent)
 
 //13. Найдите сумму баллов всех студентов (reduce)
-
+let sumStudentsScore;
+sumStudentsScore = students.reduce( (acc, s)=> s.scores + acc, 0)
+console.log('Task 13')
+console.log(sumStudentsScore)
 // И поднимаем руку!!!!
 
 let scoresSum;
