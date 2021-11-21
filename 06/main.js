@@ -109,7 +109,8 @@ console.log(deepCopyStudents)
 //6b. Объедините массивы deepCopyStudents и topStudents так,
 // чтоб сохранился порядок сортировки (spread-оператор)
 let newDeepCopyStudents;
-
+//newDeepCopyStudents = [...topStudents, ...deepCopyStudents].sort((a, b) => a.scores > b.scores ? -1 : 1)
+newDeepCopyStudents = [...topStudents, ...[...deepCopyStudents].sort((a, b) => a.scores > b.scores ? -1 : 1).splice(3)]
 console.log('Task 6b')
 console.log(newDeepCopyStudents)
 
